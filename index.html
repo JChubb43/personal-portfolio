@@ -2,10 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student portfolio featuring college course projects and creative experiments.">
+  <title>Jessie "Jay" Chubb | Student Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Header and navigation: these links jump to each section of the page. -->
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="logo" href="#top" aria-label="Jessie 'Jay' Chubb home">jessie<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero section: introduces the student and gives visitors a clear next step. -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio <span class="spark">*</span></p>
+          <h1>Curious ideas,<br><em>artistically made.</em></h1>
+          <p class="intro">Hi, I'm Jay. I'm a programmer, designer, and digital media student looking to design user-first experiences online.</p>
+          <a class="button button-primary" href="#projects">See my projects <span aria-hidden="true">-&gt;</span></a>
+        </div>
+        <div class="hero-art">
+          <img src="img/Professional Headshot.jpg" alt="Jessie Chubb smiling outdoors">
+          <p class="art-note">Always learning<br><span>and making</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section: gives visitors a short, personal introduction. -->
+    <section class="about section" id="about">
+      <div class="container about-content">
+        <div>
+          <p class="eyebrow">A little about me</p>
+          <h2>Making the internet<br><em>more human.</em></h2>
+        </div>
+        <div class="about-text">
+          <p>I’m currently studying digital media and learning how thoughtful design, clear code, and a little personality can work together. I like projects that make people pause, smile, or find what they need faster.</p>
+          <p>When I’m away from my laptop, you’ll usually find me sketching, playing games, or collecting colorful ideas in day to day life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section: shows the tools and abilities used in course projects. -->
+    <section class="skills section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What I'm learning</p>
+          <h2>Skills in my <em>toolbox</em></h2>
+        </div>
+        <div class="skill-list">
+          <span class="skill">Java</span>
+          <span class="skill">C++</span>
+          <span class="skill">HTML &amp; CSS</span>
+          <span class="skill">Google Apps</span>
+          <span class="skill">Adobe Illustrator</span>
+          <span class="skill">Git</span>
+          <span class="skill">Responsive Design</span>
+          <span class="skill">User Research</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section: displays selected work with a short explanation for each project. -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-heading project-heading">
+          <div>
+            <p class="eyebrow">Selected classwork</p>
+            <h2>Things I’ve <em>made</em></h2>
+          </div>
+          <p class="heading-note">Some of my work from over the years.</p>
+        </div>
+        <div class="project-list">
+          <article class="project-card project-card-wide">
+            <img src="img/hero-bg.jpg" alt="Colorful abstract background for the study space project">
+            <div class="project-details">
+              <p class="project-number">01 / Web design</p>
+              <h3>Study Space</h3>
+              <p>A calm, welcoming landing page designed to help students find focus and build better study habits.</p>
+              <a class="text-link" href="#contact">Ask me about it <span aria-hidden="true">-&gt;</span></a>
+            </div>
+          </article>
+          
+          <article class="project-card project-card-small">
+            <img src="img/laptop.jpg" alt="Laptop showing a creative digital project">
+            <div class="project-details">
+              <p class="project-number">02 / Digital media</p>
+              <h3>Field Notes</h3>
+              <p>A tiny editorial site for collecting observations, photos, and everyday inspiration.</p>
+              <a class="text-link" href="#contact">Ask me about it <span aria-hidden="true">-&gt;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section: makes it simple for classmates, teachers, or collaborators to reach out. -->
+    <section class="contact section" id="contact">
+      <div class="container contact-content">
+        <div>
+          <p class="eyebrow">Have an idea?</p>
+          <h2>Let's make<br><em>something good.</em></h2>
+        </div>
+        <div class="contact-details">
+          <p>I'm always happy to talk about a project, swap feedback, or learn something new.</p>
+          <a class="email-link" href="mailto:chubbjessie43@gmail.com">chubbjessie43@gmail.com <span aria-hidden="true">-&gt;</span></a>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/jchubb43" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/JChubb43" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: closes the page with a small personal signature. -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Made with curiosity by Jessie Chubb</p>
+      <p>(c) 2026</p>
+    </div>
+  </footer>
 </body>
 </html>

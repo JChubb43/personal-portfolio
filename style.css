@@ -1,1 +1,437 @@
-/* Add you CSS here */
+/* Color, spacing, and font settings used throughout the site. */
+:root {
+	--navy: #12304a;
+	--blue: #2f6f9f;
+	--sea-green: #41b7a5;
+	--mint: #e9f6f1;
+	--sky: #dceef5;
+	--paper: #f8fbfa;
+	--white: #ffffff;
+	--line: #c7dfe0;
+	--serif: Georgia, "Times New Roman", serif;
+	--sans: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* Basic page setup and smooth scrolling for navigation links. */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Makes sizing easier to understand by including padding in an element's width. */
+* {
+	box-sizing: border-box;
+}
+
+/* Sets the main text style and the default page colors. */
+body {
+	margin: 0;
+	color: var(--navy);
+	background: var(--paper);
+	font-family: var(--sans);
+	line-height: 1.6;
+}
+
+/* Prevents images from overflowing their containers. */
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Lets links use the color chosen by their surrounding section. */
+a {
+	color: inherit;
+}
+
+/* Keeps content centered and gives it a comfortable width on large screens. */
+.container {
+	width: 88%;
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+/* Header: keeps the site name and navigation easy to find. */
+.site-header {
+	padding: 24px 0;
+	background: var(--paper);
+}
+
+/* Places the logo on the left and the navigation on the right. */
+.navigation,
+.footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	color: var(--navy);
+	font-size: 1.7rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+/* Uses the accent color for small decorative details. */
+.logo span,
+.spark,
+em {
+	color: var(--sea-green);
+}
+
+nav a {
+	margin-left: 28px;
+	color: var(--blue);
+	font-size: .85rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Gives visitors feedback when they move over a link. */
+nav a:hover,
+.text-link:hover,
+.social-links a:hover {
+	color: var(--sea-green);
+}
+
+/* Hero: creates the first welcoming impression and features the portrait. */
+.hero {
+	overflow: hidden;
+	padding: 75px 0 110px;
+	background: linear-gradient(120deg, var(--sky), var(--mint));
+}
+
+.hero-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-copy {
+	width: 55%;
+}
+
+/* Small uppercase labels help visitors understand each section. */
+.eyebrow,
+.project-number {
+	margin: 0 0 14px;
+	color: var(--blue);
+	font-size: .75rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+/* Serif headings add a more personal editorial feeling to the page. */
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	font-family: var(--serif);
+	line-height: 1.1;
+}
+
+h1 {
+	max-width: 650px;
+	margin-bottom: 24px;
+	font-size: clamp(3.2rem, 7vw, 6.2rem);
+	letter-spacing: -2px;
+}
+
+h1 em,
+h2 em {
+	font-weight: normal;
+}
+
+.intro {
+	max-width: 480px;
+	margin-bottom: 32px;
+	color: #3e5e70;
+	font-size: 1.1rem;
+}
+
+/* Styles the main call-to-action button. */
+.button {
+	display: inline-block;
+	padding: 13px 21px;
+	border-radius: 4px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.button-primary {
+	color: var(--white);
+	background: var(--navy);
+}
+
+.button-primary:hover {
+	background: var(--sea-green);
+}
+
+/* Controls the size and position of the portrait area. */
+.hero-art {
+	position: relative;
+	width: 33%;
+	max-width: 340px;
+}
+
+.hero-art img {
+	width: 100%;
+	aspect-ratio: 4 / 5;
+	border: 13px solid var(--white);
+	border-radius: 48% 48% 8px 8px;
+	object-fit: cover;
+	/* Moves the cropped image content down without moving the frame. */
+	object-position: center 40%;
+	box-shadow: 14px 14px 0 var(--sea-green);
+}
+
+/* Adds a playful note beside the portrait. */
+.art-note {
+	position: absolute;
+	right: -44px;
+	bottom: 25px;
+	padding: 9px 13px;
+	color: var(--white);
+	background: var(--blue);
+	font-size: .8rem;
+	font-weight: bold;
+	line-height: 1.3;
+	transform: rotate(5deg);
+}
+
+.art-note span {
+	color: #a9e5d7;
+}
+
+/* Shared section spacing and heading styles. */
+.section {
+	padding: 105px 0;
+}
+
+h2 {
+	margin-bottom: 0;
+	font-size: clamp(2.3rem, 5vw, 4.3rem);
+	letter-spacing: -1px;
+}
+
+.about {
+	background: var(--white);
+}
+
+/* Places the two halves of the About and Contact sections side by side. */
+.about-content,
+.contact-content {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+}
+
+.about-content > div,
+.contact-content > div {
+	width: 50%;
+}
+
+.about-text {
+	max-width: 500px;
+	padding-top: 20px;
+	color: #496879;
+}
+
+/* Skills: presents abilities as simple, friendly labels. */
+.section-heading {
+	margin-bottom: 38px;
+}
+
+/* Flexbox lets skill labels wrap onto new lines when needed. */
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.skill {
+	padding: 12px 18px;
+	border: 1px solid var(--line);
+	border-radius: 30px;
+	color: var(--blue);
+	background: var(--white);
+}
+
+/* Projects: uses cards to make each piece of work easy to scan. */
+.projects {
+	background: var(--sky);
+}
+
+/* Puts the project heading and its short description on one line. */
+.project-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.heading-note {
+	max-width: 260px;
+	margin: 0 0 5px;
+	color: #496879;
+}
+
+/* Displays the project cards next to one another on larger screens. */
+.project-list {
+	display: flex;
+	align-items: stretch;
+	gap: 24px;
+}
+
+.project-card {
+	overflow: hidden;
+	background: var(--white);
+	box-shadow: 0 8px 0 rgba(18, 48, 74, .08);
+}
+
+.project-card-wide {
+	width: 58%;
+}
+
+.project-card-small {
+	width: 42%;
+}
+
+.project-card > img {
+	width: 100%;
+	height: 230px;
+	object-fit: cover;
+}
+
+.project-details {
+	padding: 27px;
+}
+
+.project-details h3 {
+	margin-bottom: 9px;
+	font-size: 1.7rem;
+}
+
+/* Gives both project descriptions a similar amount of space. */
+.project-details > p:not(.project-number) {
+	min-height: 52px;
+	margin-top: 0;
+	color: #496879;
+}
+
+.text-link,
+.email-link {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.text-link span,
+.email-link span {
+	color: var(--sea-green);
+}
+
+/* Contact: ends with a clear invitation and a visible email address. */
+.contact {
+	background: var(--navy);
+	color: var(--white);
+}
+
+.contact .eyebrow {
+	color: var(--sea-green);
+}
+
+.contact-details {
+	padding-top: 22px;
+}
+
+.contact-details > p {
+	max-width: 400px;
+	color: #b9d1d9;
+}
+
+.email-link {
+	display: inline-block;
+	margin: 16px 0 28px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid var(--sea-green);
+	color: var(--white);
+	font-size: 1.2rem;
+}
+
+.social-links a {
+	margin-right: 24px;
+	color: #b9d1d9;
+	font-size: .9rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Footer: adds a quiet closing line below the main content. */
+.site-footer {
+	padding: 22px 0;
+	color: #648391;
+	background: #0e273b;
+	font-size: .75rem;
+}
+
+/* Mobile layout: stacks content so it remains readable on small screens. */
+@media (max-width: 700px) {
+	.site-header {
+		padding: 18px 0;
+	}
+
+	nav a {
+		margin-left: 12px;
+		font-size: .72rem;
+	}
+
+	.hero {
+		padding: 55px 0 80px;
+	}
+
+	/* Stacks major content areas for smaller screens. */
+	.hero-content,
+	.about-content,
+	.contact-content,
+	.project-list,
+	.project-heading {
+		display: block;
+	}
+
+	.hero-copy,
+	.about-content > div,
+	.contact-content > div,
+	.project-card-wide,
+	.project-card-small {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	.hero-art {
+		width: 72%;
+		margin: 55px auto 20px;
+	}
+
+	.art-note {
+		right: -20px;
+	}
+
+	.section {
+		padding: 70px 0;
+	}
+
+	.about-text,
+	.contact-details {
+		padding-top: 28px;
+	}
+
+	.heading-note {
+		margin-top: 18px;
+	}
+
+	.project-card + .project-card {
+		margin-top: 24px;
+	}
+}
