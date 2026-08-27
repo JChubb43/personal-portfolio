@@ -5,7 +5,7 @@
 	--sea-green: #41b7a5;
 	--mint: #e9f6f1;
 	--sky: #dceef5;
-	--paper: #f8fbfa;
+	--paper: #f1f8f6;
 	--white: #ffffff;
 	--line: #c7dfe0;
 	--serif: Georgia, "Times New Roman", serif;
@@ -242,7 +242,23 @@ h2 {
 	margin-bottom: 38px;
 }
 
-/* Flexbox lets skill labels wrap onto new lines when needed. */
+/* Places the three skill categories next to one another on larger screens. */
+.skill-groups {
+	display: flex;
+	justify-content: space-between;
+	gap: 35px;
+}
+
+.skill-group {
+	width: 33.33%;
+}
+
+.skill-group h3 {
+	margin-bottom: 18px;
+	font-size: 1.5rem;
+}
+
+/* Flexbox lets skill labels wrap onto new lines within each category. */
 .skill-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -250,11 +266,78 @@ h2 {
 }
 
 .skill {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 	padding: 12px 18px;
 	border: 1px solid var(--line);
 	border-radius: 30px;
 	color: var(--blue);
 	background: var(--white);
+}
+
+/* Keeps each Google Material Icon the same size and accent color. */
+.material-icons {
+	color: var(--sea-green);
+	font-size: 1.1rem;
+}
+
+/* Education: separates the degree summary from the individual academic details. */
+.education {
+	background: var(--white);
+}
+
+.education-content {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	padding: 34px 0;
+	border-top: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+}
+
+.school-summary {
+	width: 38%;
+}
+
+.school-summary h3 {
+	margin-bottom: 16px;
+	font-size: 2rem;
+}
+
+.education-label {
+	margin: 0 0 8px;
+	color: var(--blue);
+	font-size: .72rem;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.graduation-date {
+	margin: 0;
+	color: #496879;
+}
+
+.education-details {
+	display: flex;
+	flex-wrap: wrap;
+	width: 58%;
+	gap: 28px 40px;
+}
+
+.education-item {
+	min-width: 130px;
+}
+
+.education-item p:last-child {
+	margin: 0;
+	color: var(--navy);
+	font-weight: bold;
+}
+
+.honors-item {
+	width: 100%;
 }
 
 /* Projects: uses cards to make each piece of work easy to scan. */
@@ -283,6 +366,8 @@ h2 {
 }
 
 .project-card {
+	display: flex;
+	flex-direction: column;
 	overflow: hidden;
 	background: var(--white);
 	box-shadow: 0 8px 0 rgba(18, 48, 74, .08);
@@ -303,6 +388,9 @@ h2 {
 }
 
 .project-details {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 	padding: 27px;
 }
 
@@ -322,6 +410,22 @@ h2 {
 .email-link {
 	font-weight: bold;
 	text-decoration: none;
+}
+
+/* Centers each project link and gives it the appearance of a button. */
+.text-link {
+	display: block;
+	width: fit-content;
+	margin: auto auto 0;
+	padding: 11px 18px;
+	border-radius: 4px;
+	color: var(--white);
+	background: var(--navy);
+}
+
+.text-link:hover {
+	color: var(--white);
+	background: var(--sea-green);
 }
 
 .text-link span,
@@ -392,6 +496,7 @@ h2 {
 	.hero-content,
 	.about-content,
 	.contact-content,
+	.skill-groups,
 	.project-list,
 	.project-heading {
 		display: block;
@@ -400,6 +505,9 @@ h2 {
 	.hero-copy,
 	.about-content > div,
 	.contact-content > div,
+	.skill-group,
+	.school-summary,
+	.education-details,
 	.project-card-wide,
 	.project-card-small {
 		width: 100%;
@@ -423,8 +531,13 @@ h2 {
 	}
 
 	.about-text,
-	.contact-details {
+	.contact-details,
+	.education-details {
 		padding-top: 28px;
+	}
+
+	.education-content {
+		padding: 28px 0;
 	}
 
 	.heading-note {

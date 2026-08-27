@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A student portfolio featuring college course projects and creative experiments.">
-  <title>Jessie "Jay" Chubb | Student Portfolio</title>
+  <title>Jessie "Jay" Chubb | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Material Icons: provides the icons used beside each skill. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
   <!-- Header and navigation: these links jump to each section of the page. -->
@@ -14,6 +16,8 @@
       <a class="logo" href="#top" aria-label="Jessie 'Jay' Chubb home">jessie<span>.</span></a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -27,8 +31,8 @@
         <div class="hero-copy">
           <p class="eyebrow">Portfolio <span class="spark">*</span></p>
           <h1>Curious ideas,<br><em>artistically made.</em></h1>
-          <p class="intro">Hi, I'm Jay. I'm a programmer, designer, and digital media student looking to design user-first experiences online.</p>
-          <a class="button button-primary" href="#projects">See my projects <span aria-hidden="true">-&gt;</span></a>
+          <p class="intro">Hi, I'm Jay! I'm a programmer, designer, and digital media student looking to design user-first experiences online.</p>
+          <a class="button button-primary" href="#projects">See my Projects <span aria-hidden="true">-&gt;</span></a>
         </div>
         <div class="hero-art">
           <img src="img/Professional Headshot.jpg" alt="Jessie Chubb smiling outdoors">
@@ -52,21 +56,87 @@
     </section>
 
     <!-- Skills section: shows the tools and abilities used in course projects. -->
-    <section class="skills section">
+    <section class="skills section" id="skills">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">What I'm learning</p>
           <h2>Skills in my <em>toolbox</em></h2>
         </div>
-        <div class="skill-list">
-          <span class="skill">Java</span>
-          <span class="skill">C++</span>
-          <span class="skill">HTML &amp; CSS</span>
-          <span class="skill">Google Apps</span>
-          <span class="skill">Adobe Illustrator</span>
-          <span class="skill">Git</span>
-          <span class="skill">Responsive Design</span>
-          <span class="skill">User Research</span>
+        <div class="skill-groups">
+          <!-- Programming skills: languages and tools used to build websites and software. -->
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <div class="skill-list">
+              <span class="skill"><span class="material-icons" aria-hidden="true">code</span>Java</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">code</span>C++</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">web</span>HTML &amp; CSS</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">merge_type</span>Git</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">fact_check</span>Unit Testing</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">account_tree</span>UML Diagraming</span>
+            </div>
+          </div>
+
+          <!-- Art and design skills: tools and methods used to plan visual experiences. -->
+          <div class="skill-group">
+            <h3>Art &amp; Design</h3>
+            <div class="skill-list">
+              <span class="skill"><span class="material-icons" aria-hidden="true">apps</span>Google Apps</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">draw</span>Adobe Illustrator</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">brush</span>Krita</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">palette</span>Studio Art</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">devices</span>Responsive Design</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">search</span>User Research</span>
+            </div>
+          </div>
+
+          <!-- Film and photography skills: media skills used to tell stories with images. -->
+          <div class="skill-group">
+            <h3>Film, Photography, &amp; Theatre</h3>
+            <div class="skill-list">
+              <span class="skill"><span class="material-icons" aria-hidden="true">photo_camera</span>Photography</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">movie</span>Video Editing</span>
+              <span class="skill"><span class="material-icons" aria-hidden="true">theater_comedy</span>Costume, Makeup, &amp; Set Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education section: summarizes the degree, academic focus, and achievements. -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Academic background</p>
+          <h2>Learning with <em>purpose.</em></h2>
+        </div>
+        <div class="education-content">
+          <div class="school-summary">
+            <p class="education-label">School</p>
+            <h3>University of South Carolina — Columbia</h3>
+            <p class="graduation-date">Expected graduation: May 2027</p>
+          </div>
+          <div class="education-details">
+            <div class="education-item">
+              <p class="education-label">Major</p>
+              <p>Computer Science</p>
+            </div>
+            <div class="education-item">
+              <p class="education-label">Minors</p>
+              <p>Theatre<br>Media Arts</p>
+            </div>
+            <div class="education-item">
+              <p class="education-label">Concentration</p>
+              <p>Artificial Intelligence</p>
+            </div>
+            <div class="education-item">
+              <p class="education-label">GPA</p>
+              <p>3.920</p>
+            </div>
+            <div class="education-item honors-item">
+              <p class="education-label">Honors &amp; awards</p>
+              <p>President's Honor List (Two Semesters)<br>Provost Scholarship</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -76,29 +146,29 @@
       <div class="container">
         <div class="section-heading project-heading">
           <div>
-            <p class="eyebrow">Selected classwork</p>
+            <p class="eyebrow">Selected projects</p>
             <h2>Things I’ve <em>made</em></h2>
           </div>
           <p class="heading-note">Some of my work from over the years.</p>
         </div>
         <div class="project-list">
           <article class="project-card project-card-wide">
-            <img src="img/hero-bg.jpg" alt="Colorful abstract background for the study space project">
+            <img src="img/WormWarriors - Cover Image V2.png" alt="Screenshot from Worm Warriors Title Screen. The title is done in stylized letters made to look like worms, with a background of a grass patch.">
             <div class="project-details">
-              <p class="project-number">01 / Web design</p>
-              <h3>Study Space</h3>
-              <p>A calm, welcoming landing page designed to help students find focus and build better study habits.</p>
-              <a class="text-link" href="#contact">Ask me about it <span aria-hidden="true">-&gt;</span></a>
+              <p class="project-number">01 / Game Design</p>
+              <h3>Worm Warriors</h3>
+              <p>A point and click collectathon dedicated to rescuing worms off of sidewalks!</p>
+              <a class="text-link" href="https://jchubb43.itch.io/worm-warriors" target="_blank" rel="noreferrer">Play it Here <span aria-hidden="true">-&gt;</span></a>
             </div>
           </article>
           
           <article class="project-card project-card-small">
             <img src="img/laptop.jpg" alt="Laptop showing a creative digital project">
             <div class="project-details">
-              <p class="project-number">02 / Digital media</p>
-              <h3>Field Notes</h3>
-              <p>A tiny editorial site for collecting observations, photos, and everyday inspiration.</p>
-              <a class="text-link" href="#contact">Ask me about it <span aria-hidden="true">-&gt;</span></a>
+              <p class="project-number">02 / Digital Design</p>
+              <h3>Grey's Pest Control Logo</h3>
+              <p>A custom logo package for a start up pest control service! The client's design, brought to life after rounds of trial and error.</p>
+              <a class="text-link" href="#contact">Ask Me About It <span aria-hidden="true">-&gt;</span></a>
             </div>
           </article>
         </div>
@@ -118,6 +188,7 @@
           <div class="social-links">
             <a href="https://www.linkedin.com/in/jchubb43" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/JChubb43" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.instagram.com/bluejay.unlimited/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
           </div>
         </div>
       </div>
