@@ -185,6 +185,35 @@ h2 em {
 	box-shadow: 14px 14px 0 var(--sea-green);
 }
 
+/* Projects page intro: uses the same colors and heading style as the home hero. */
+.projects-page-intro {
+	padding: 85px 0 75px;
+	text-align: center;
+	background: linear-gradient(120deg, var(--sky), var(--mint));
+}
+
+.projects-page-intro .container {
+	width: 100%;
+	max-width: none;
+	padding: 0 6%;
+	text-align: center;
+}
+
+.projects-page-intro h1 {
+	width: fit-content;
+	max-width: 100%;
+	margin-bottom: 24px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.projects-page-intro .intro {
+	max-width: 720px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+}
+
 /* Adds a playful note beside the portrait. */
 .art-note {
 	position: absolute;
@@ -340,11 +369,6 @@ h2 {
 	width: 100%;
 }
 
-/* Projects: uses cards to make each piece of work easy to scan. */
-.projects {
-	background: var(--sky);
-}
-
 /* Puts the project heading and its short description on one line. */
 .project-heading {
 	display: flex;
@@ -365,12 +389,42 @@ h2 {
 	gap: 24px;
 }
 
+/* The dedicated projects page gives each project the full content width. */
+.project-list-stack {
+	display: block;
+}
+
+.project-list-stack .project-card + .project-card {
+	margin-top: 24px;
+}
+
 .project-card {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 	background: var(--white);
 	box-shadow: 0 8px 0 rgba(18, 48, 74, .08);
+}
+
+/* Full-width project cards place the image and project information side by side. */
+.project-list-stack .project-card-left,
+.project-list-stack .project-card-right {
+	flex-direction: row;
+}
+
+.project-list-stack .project-card > img {
+	width: 50%;
+	height: auto;
+	min-height: 300px;
+}
+
+.project-list-stack .project-details {
+	width: 50%;
+}
+
+/* The right-aligned version flips the image and text positions. */
+.project-list-stack .project-card-right > img {
+	order: 2;
 }
 
 .project-card-wide {
@@ -546,5 +600,20 @@ h2 {
 
 	.project-card + .project-card {
 		margin-top: 24px;
+	}
+
+	.project-list-stack .project-card-left,
+	.project-list-stack .project-card-right {
+		flex-direction: column;
+	}
+
+	.project-list-stack .project-card > img,
+	.project-list-stack .project-details {
+		width: 100%;
+	}
+
+	.project-list-stack .project-card > img {
+		height: 230px;
+		min-height: 0;
 	}
 }
